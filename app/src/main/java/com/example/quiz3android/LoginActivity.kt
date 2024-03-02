@@ -24,6 +24,9 @@ class LoginActivity : AppCompatActivity() {
 
             if (username == "user" && password == "password") {
                 Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, PhotoActivity::class.java)
+                startActivity(intent)
+                finish()
             } else {
                 Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show()
             }
